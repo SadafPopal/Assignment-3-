@@ -1,0 +1,118 @@
+/* Google Font + Basic Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    background: radial-gradient(circle at center, #000000 0%, #000 100%);
+    color: #267030c2;
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Theater Container */
+  .theater-screen {
+    background-color: #111;
+    border: 12px solid #083d0fc2;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 30px #083d0fc2, 0 0 25px #083d0fc2;
+    width: 90%;
+    max-width: 900px;
+    position: relative;
+  }
+  
+  /* Heading with Emojis */
+  .theater-screen h1 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #d9ff00;
+    text-shadow: 0 0 5px #d9ff00, 0 0 10px #083d0fc2;
+  }
+  
+  /* Video Styling */
+  video {
+    width: 100%;
+    border: 6px solid #267030c2;
+    border-radius: 12px;
+    box-shadow: 0 0 25px #083d0fc2, 0 0 50px #000;
+  }
+  
+  /* Bonus: Blinking marquee lights effect */
+  .theater-screen::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 10%;
+    width: 80%;
+    height: 15px;
+    background: repeating-linear-gradient(
+      to right,
+      #ff0,
+      #ff0 10px,
+      #000 10px,
+      #000 20px
+    );
+    animation: blink 1s infinite;
+    border-radius: 10px;
+  }
+  
+  /* Light blinking animation */
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+  }
+  
+
+  .controls {
+    margin-top: 20px;
+  }
+  
+  .controls button {
+    background: #b8e63a;
+    color: #111;
+    font-family: 'Press Start 2P', cursive;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #93ec04;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  .controls button:hover {
+    transform: scale(1.1);
+    background: #b8e63a;
+  }
+
+  
+  body {
+    animation: fadeIn 1s ease-in-out;
+      
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes neonFlicker {
+    0%, 100% {
+      text-shadow: 0 0 10px #ffd700, 0 0 20px #5cff47;
+    }
+    50% {
+      text-shadow: 0 0 5px #ffd700, 0 0 10px #5cff47;
+    }
+  }
+  
+  .theater-screen h1 {
+    animation: neonFlicker 1.5s infinite alternate;
+  }
+
+  
